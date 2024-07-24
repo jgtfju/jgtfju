@@ -1,0 +1,52 @@
+<!-- 用户列表选项 -->
+<scroll-view class='scbg' scroll-y='true'>
+  <view class="parent_catainer">
+    <!-- 头部 -->
+    <!-- style="background-image: url('/images/persons/mind_head_bg.jpg');" -->
+    <view class="container_head">
+      <image class="head_img" src="/images/bar/back.jpg"></image>
+      <view class="head_pers_info" bindtap="head_pers_info">
+        <view class="head_pic">
+          <image class="head_pic_content" mode="aspectFit" src="/images/bar/lemon.jpg" bindtap="user"></image>
+        </view>
+        <view class="inf_content">
+          <text class="user_info" value="{{value}}">昌</text>
+          <text class="family_info_ct_phone">花坊会员</text>
+        </view>
+      </view>
+    </view>
+    <view class="userItemListView">
+    </view>
+    <view class="userItemListView">
+      <view class="my_priview_md" bindtap="openmyorder">
+        <image class="my_priview" src="/images/bar/a.png"></image>
+        <text>我的订单</text>
+        <view class="arrow"></view> 
+      </view>
+      <view class="my_priview_md" bindtap="myaid">
+        <image class="my_priview" src="/images/bar/b.png"></image>
+        <text>我的收藏</text>
+        <view class="arrow"></view>
+      </view>
+      
+      <view class="my_priview_md" bindtap="mycollection">
+        <image class="my_priview" src="/images/bar/c.png" ></image>
+        <text>我的地址</text>
+        <view class="arrow"></view>
+      </view>
+      <view class="my_priview_md" bindtap="contact">
+        <image class="my_priview" src="/images/bar/d.png" ></image>
+        <text>联系客服</text>
+        <view class="arrow"></view>
+      </view>
+      <view class="my_priview_md" bindtap="myfriend">
+        <image class="my_priview" src="/images/bar/e.png" ></image>
+        <text> 关于版本号</text>
+        <view class="arrow"></view>
+      </view>
+    </view>
+ 
+   
+  </view>
+</scroll-view>
+
