@@ -1,0 +1,21 @@
+using System;
+using System.Web.Services.Protocols;
+
+namespace TestAsmxProject.Filter.SOAP
+{
+    [AttributeUsage(AttributeTargets.Method)]
+    public class IpFilterAttribute : SoapExtensionAttribute
+    {
+        public override Type ExtensionType => typeof(IpFilter);
+
+        public override int Priority { get; set; }
+
+        public string[] AllowedIps { get; private set; }
+
+        public IpFilterAttribute(params string[] ips)
+        {
+            AllowedIps = ips.Length > 0 ? ips : null;
+            Priority = 1;
+        }
+    } 
+}
